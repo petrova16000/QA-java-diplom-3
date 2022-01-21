@@ -8,6 +8,8 @@ import org.openqa.selenium.support.How;
 
 public class RegistrationPage {
 
+    public static final String URL = "https://stellarburgers.nomoreparties.site/register";
+
     //Имя
     @FindBy(how = How.XPATH,using = "//*[@id=\"root\"]/div/main/div/form/fieldset[1]/div/div/input")
     private SelenideElement nameField;

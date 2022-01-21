@@ -29,15 +29,16 @@ public class LoginTests {
         Map<String, String> response = userOperations.register();
         String email = response.get("email");
         String password = response.get("password");
-        RegistrationPage registrationPage = open("https://stellarburgers.nomoreparties.site/register",
+        RegistrationPage registrationPage =
+                open(RegistrationPage.URL,
                 RegistrationPage.class);
         registrationPage.clickButtonLogin();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.checkAssembleABurgerText();
         userOperations.delete();
@@ -50,15 +51,15 @@ public class LoginTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonPersonalArea();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         ConstructorPage constructorPage2 =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage2.checkAssembleABurgerText();
         userOperations.delete();
@@ -71,15 +72,15 @@ public class LoginTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonSignIn();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         ConstructorPage constructorPage2 =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage2.checkAssembleABurgerText();
         userOperations.delete();
@@ -92,15 +93,15 @@ public class LoginTests {
         String email = response.get("email");
         String password = response.get("password");
         ForgotPasswordPage forgotPasswordPage =
-                open("https://stellarburgers.nomoreparties.site/forgot-password",
+                open(ForgotPasswordPage.URL,
                         ForgotPasswordPage.class);
         forgotPasswordPage.clickButtonLogin();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         ConstructorPage constructorPage2 =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage2.checkAssembleABurgerText();
         userOperations.delete();

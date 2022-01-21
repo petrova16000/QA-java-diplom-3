@@ -20,7 +20,7 @@ public class RegistrationTests {
     @Before
     public void before(){
         System.setProperty("webdriver.chrome.driver", "C:/Users/a.khudyakova/Downloads/yandexdriver-22.1.0.2410-win/yandexdriver.exe");
-        registrationPage = open("https://stellarburgers.nomoreparties.site/register",
+        registrationPage = open(RegistrationPage.URL,
                 RegistrationPage.class);
     }
     @Test
@@ -30,7 +30,7 @@ public class RegistrationTests {
         String name = RandomStringUtils.randomAlphabetic(10);
         registrationPage.register(name, email, password);
         LoginPage login =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         login.checkLoginText();
     }

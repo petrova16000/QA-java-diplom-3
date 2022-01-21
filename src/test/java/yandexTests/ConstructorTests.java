@@ -28,16 +28,16 @@ public class ConstructorTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonPersonalArea();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         constructorPage.clickButtonPersonalArea();
         PersonalAreaPage personalAreaPage =
-                open("https://stellarburgers.nomoreparties.site/account",
+                open(PersonalAreaPage.URL,
                         PersonalAreaPage.class);
         personalAreaPage.checkButtonProfile();
         userOperations.delete();
@@ -46,7 +46,7 @@ public class ConstructorTests {
     @Test
     public void checkSuccessTransitionSaucesYandex(){
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonSauces();
         constructorPage.checkSaucesText();
@@ -55,7 +55,7 @@ public class ConstructorTests {
     @Test
     public void checkSuccessTransitionBunYandex(){
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonStuffing();
         constructorPage.clickButtonBun();
@@ -65,7 +65,7 @@ public class ConstructorTests {
     @Test
     public void checkSuccessTransitionStuffingYandex(){
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonStuffing();
         constructorPage.checkStuffingText();

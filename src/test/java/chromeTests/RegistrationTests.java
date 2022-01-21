@@ -18,7 +18,7 @@ public class RegistrationTests {
 
     @Before
     public void before(){
-        registrationPage = open("https://stellarburgers.nomoreparties.site/register",
+        registrationPage = open(RegistrationPage.URL,
                         RegistrationPage.class);
     }
 
@@ -29,7 +29,7 @@ public class RegistrationTests {
         String name = RandomStringUtils.randomAlphabetic(10);
         registrationPage.register(name, email, password);
         LoginPage login =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         login.checkLoginText();
     }

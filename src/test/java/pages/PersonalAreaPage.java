@@ -8,6 +8,8 @@ import org.openqa.selenium.support.How;
 
 public class PersonalAreaPage {
 
+    public static final String URL = "https://stellarburgers.nomoreparties.site/account";
+
     //кнопка Профиль
     @FindBy(how = How.XPATH, using = "//*[@id=\"root\"]/div/main/div/nav/ul/li[1]")
     private SelenideElement buttonProfile;

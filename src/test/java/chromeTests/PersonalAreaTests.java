@@ -22,16 +22,16 @@ public class PersonalAreaTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonPersonalArea();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         constructorPage.clickButtonPersonalArea();
         PersonalAreaPage personalAreaPage =
-                open("https://stellarburgers.nomoreparties.site/account",
+                open(PersonalAreaPage.URL,
                         PersonalAreaPage.class);
         personalAreaPage.clickButtonStellarBurgers();
         constructorPage.checkAssembleABurgerText();
@@ -45,16 +45,16 @@ public class PersonalAreaTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonPersonalArea();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         constructorPage.clickButtonPersonalArea();
         PersonalAreaPage personalAreaPage =
-                open("https://stellarburgers.nomoreparties.site/account",
+                open(PersonalAreaPage.URL,
                         PersonalAreaPage.class);
         personalAreaPage.clickButtonConstructor();
         constructorPage.checkAssembleABurgerText();
@@ -68,16 +68,16 @@ public class PersonalAreaTests {
         String email = response.get("email");
         String password = response.get("password");
         ConstructorPage constructorPage =
-                open("https://stellarburgers.nomoreparties.site/",
+                open(ConstructorPage.URL,
                         ConstructorPage.class);
         constructorPage.clickButtonPersonalArea();
         LoginPage loginPage =
-                open("https://stellarburgers.nomoreparties.site/login",
+                open(LoginPage.URL,
                         LoginPage.class);
         loginPage.login(email, password);
         constructorPage.clickButtonPersonalArea();
         PersonalAreaPage personalAreaPage =
-                open("https://stellarburgers.nomoreparties.site/account",
+                open(PersonalAreaPage.URL,
                         PersonalAreaPage.class);
         personalAreaPage.clickButtonExit();
         loginPage.checkLoginText();

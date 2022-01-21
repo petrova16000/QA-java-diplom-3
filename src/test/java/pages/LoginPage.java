@@ -8,6 +8,8 @@ import org.openqa.selenium.support.How;
 
 public class LoginPage {
 
+    public static final String URL = "https://stellarburgers.nomoreparties.site/login";
+
     //кнопка Зарегистрироваться
     @FindBy(how = How.XPATH,using = "//*[@id=\"root\"]/div/main/div/div/p[1]/a")
     private SelenideElement buttonRegistration;
